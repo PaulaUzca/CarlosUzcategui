@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books | Carlos Uzcategui</title>
+    <link rel="shortcut icon" href="../alph.svg">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="books.css">
+</head>
+<body>
+    <header>
+        <div class="background__image"></div>
+        <a href="../index.html" class="title">Carlos Uzcátegui</a>
+        <nav class="menu">
+            <ul class="menu__list">
+                <li> <a href="../about/about.html">About</a></li>
+                <li> <a href="../research/research.html">Research</a></li>
+                <li> <a href="../publications/publications.html">Publications</a></li>
+                <li> <a href="#">Books</a></li>
+                <li> <a href="../students/students.html">Students</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="books">
+        <h2 class="section--title">Books</h2>
+            <article class="contenido">
+              <div class="book">
+                <p class="book__title">Lógica, Conjuntos y Números</p>
+                <img class="book__cover" src="https://i.imgur.com/YjbuLbT.png" alt="Portada Libro">
+                <article class="book__description">
+                  <p> Authors: Carlos Uzcátegui Aylwin</p>
+                  <p> Editorial: </p>
+                  <p> Year: 2011</p>
+                  <a class="book__link" href="https://drive.google.com/file/d/1AIkUdzkEpfcFK6FdpwNXmW10sUKKbHxA/view?usp=sharing" target="_blank">pdf</a>
+                    <p class="book__intro">
+                      En estas notas presentamos algunas de las ideas y herramientas básicas
+                      que necesitará un estudiante de matemáticas durante todos sus estudios
+                      de licenciatura. Creemos que, a pesar de la naturaleza abstracta de las
+                      matemáticas y de su parafernalia simbólica, sus ideas fundamentales se
+                      pueden motivar de tal manera que el estudiante no termine pensando que
+                      la matemática es sólo una larga cadena de teoremas entrelazados entre sí.
+                      <br>
+                      <br>
+                      El libro consta de 4 capítulos. En el primero estudiamos los rudimentos de
+                      la lógica simbólica. El capítulo 2 contiene las nociones básicas de la teoría
+                      de conjuntos que serán usados en prácticamente todos los estudios de
+                      matemáticas. La inducción matemática es un método de demostración de
+                      uso muy frecuente y la trataremos en el capítulo 3. Por último, en el
+                      capítulo 4 daremos una breve introducción a los números enteros,
+                      presentando las nociones básicas de la teoría de números. En este
+                      capítulo el lector se encontrará, quizá por primera vez,
+                      con las
+                      demostraciones formales. Creemos que la teoría de números es un tema
+                      apropiado para que un estudiante pueda iniciarse en los métodos de
+                      demostración.
+                      </p>
+                    <span class="seemore__button"></span>
+                </article>
+              </div>
+
+              <div class="book">
+                <p class="book__title">El libro de papi</p>
+                <img class="book__cover" src="https://cdn.pixabay.com/photo/2020/03/23/08/45/cat-4959941__340.jpg" alt="Portada Libro">
+                <article class="book__description">
+                  <p> Authors: </p>
+                  <p> Editorial: </p>
+                  <p> Year: </p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nihil explicabo atque velit omnis debitis modi rerum consectetur cum doloremque fugit ad officiis odit necessitatibus id, vel architecto labore officia.</p>
+                </article>
+              </div>
+
+              <div class="book">
+                <p class="book__title">El libro de papi</p>
+                <img class="book__cover" src="https://cdn.pixabay.com/photo/2020/03/23/08/45/cat-4959941__340.jpg" alt="Portada Libro">
+                <article class="book__description">
+                  <p> Authors: </p>
+                  <p> Editorial: </p>
+                  <p> Year: </p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nihil explicabo atque velit omnis debitis modi rerum consectetur cum doloremque fugit ad officiis odit necessitatibus id, vel architecto labore officia.</p>
+                </article>
+              </div>
+            </article>
+        </section>
+    </main>
+
+    <script>
+      var seeMore = document.querySelectorAll(".seemore__button");
+      var bookIntros = document.querySelectorAll(".book__intro");
+
+      for(let i = 0; i< seeMore.length; i++){
+        seeMore[i].addEventListener("click", function(){
+          this.classList.toggle("seeless");
+          bookIntros[i].classList.toggle("book__intro--showMore");
+        });
+      }
+    </script>
+    
+</body>
+</html>

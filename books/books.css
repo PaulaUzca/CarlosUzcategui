@@ -1,0 +1,222 @@
+:root{
+    --fancyBlack : #060709;
+    --fancyWhite: #E3E2DB;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+body{
+    width: 100%;
+    height: auto;
+    background-color: var(--fancyWhite);
+    position: relative;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: var(--fancyBlack);
+    border-radius: 30px;
+}
+body::-webkit-scrollbar{
+    width: 10px;
+    background-color: transparent;
+}
+header{
+    width: 100%;
+    min-width: 320px;
+    height: 100px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: black;
+    box-shadow: 0px 2px 10px 6px rgba(0, 0, 0, 0.25);
+}
+.background__image{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-image: url(https://i.imgur.com/ULlme6i.png);
+    background-size: cover;
+    background-position: center;
+    opacity: 40%;
+}
+.title{
+    z-index: 2;
+    margin-top: 10px;
+    font-size: 3rem;
+    font-family: 'DM Serif Display', serif;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+.title:hover{
+    font-size: 3.1rem;
+}
+.menu{
+    z-index: 2;
+    width: 100%;
+    padding: 10px 0px;
+    font-family: serif;
+}
+.menu__list{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.menu__list li{
+    font-size: 1.8rem;
+    display: inline-block;
+    list-style: none;
+    padding: 0 10px;
+}
+.menu__list a{
+    color: white;
+    text-decoration: none;
+}
+.menu__list a:hover{
+    text-decoration: underline;
+}
+
+
+main{
+    width: 100%;
+    height: auto;
+    min-width: 320px;
+    margin: 0 auto;
+    overflow: hidden;
+    animation: showMain 0.5s ease-in forwards;
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+@keyframes showMain {
+    10%{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+main section{
+    width: 100%;
+    height: auto;
+    min-height: 350px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+.section--title{
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 3.2rem;
+    font-weight: normal;
+    font-family: 'DM Serif Display', serif;
+    color: black;
+}
+.books{
+    display: flex;
+    flex-direction: column;
+
+}
+.books .section--title{
+    padding: 0 20px;
+}
+.books .contenido{
+    order:3;
+    padding: 0 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+.book{
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    min-height: 300px;
+    margin: 0 10px 80px 10px;
+}
+.book__cover{
+    width: 100%;
+    max-width: 320px;
+    height: 200px;
+    margin: 20px 0;
+    object-fit: cover;
+    object-position: center;
+}
+.book__title{
+    font-size: 2.5rem;
+    font-family: 'DM Serif Display', serif;
+}
+.book__description{
+    font-size: 2rem;
+}
+.book__link{
+    color: blue;
+    text-decoration: none;
+}
+.book__link:hover{
+    text-decoration: underline;
+}
+.book__intro{
+    height: auto;
+    max-height: 160px;
+    overflow-y: hidden;
+}
+.book__intro--showMore{
+    max-height: 100%;
+    overflow-y: visible;
+}
+.seemore__button{
+    text-decoration: underline;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+.seemore__button:hover{
+    font-weight: bold;
+}
+.seemore__button::after{
+    content: "show more";
+}
+.seeless::after{
+    content: "show less";
+}
+
+@media (min-width: 600px) {
+    .book{
+        max-width: 700px;
+        display: grid;
+        grid-template-columns: 250px auto;
+        grid-template-rows: 1px auto;
+        grid-column-gap: 15px;
+    }
+    .book__cover{
+        height: auto;
+        min-height: 200px;
+        grid-column-start: 1;
+        grid-row-start: 2;
+        margin: 0;
+    }
+    .book__title{
+        grid-column-start: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .book__description{
+        grid-column-start: 2;
+        grid-row-start: 2;
+        margin-top: 65px;
+    }
+}

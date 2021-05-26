@@ -1,0 +1,102 @@
+:root{
+    --fancyBlack : #060709;
+    --fancyWhite: #E3E2DB;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family: serif;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--fancyWhite);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.title__container{
+    width: 100vw;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    position: relative;
+}
+.background__image{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-image: url(https://i.imgur.com/ULlme6i.png);
+    background-size: cover;
+    opacity: 40%;
+}
+.text__container{
+    z-index: 2;
+}
+.title{
+    margin-top: 0px;
+    opacity: 0;
+    font-weight: normal;
+    font-size: 4rem;
+    font-family: 'DM Serif Display', serif;
+    color: white;
+    text-align: center;
+    animation: fadeTitle 1s ease-in forwards ;
+}
+@keyframes fadeTitle {
+    10%{
+        margin-top: 0px;
+        opacity: 0;
+    }
+    100%{
+        margin-top: 40px;
+        opacity: 1;
+    }
+}
+.menu{
+    width: 100vw;
+    background-color: var(--fancyBlack);
+    padding: 20px 0px;
+}
+.menu__list{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.menu__list li{
+    opacity: 0;
+    font-size: 2.5rem;
+    display: inline-block;
+    list-style: none;
+    padding: 0 30px;
+    animation: appear 1.3s ease-in forwards;
+}
+
+@keyframes appear {
+    20%{
+    opacity: 0;
+    margin-right: 30px;
+    }
+    100%{
+    opacity: 1;
+    margin-right: 0px;
+    }
+}
+.menu__list a{
+    color: white;
+    text-decoration: none;
+}
+.menu__list a:hover{
+    text-decoration: underline;
+}

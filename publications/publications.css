@@ -90,11 +90,12 @@ header{
 
 
 main{
-    width: 100%;
+    width: 90%;
     height: auto;
     min-width: 320px;
-    max-width: calc(100% - 200px);
+    max-width: 1500px;
     margin: 0 auto;
+    padding: 0 10px;
     overflow: hidden;
     animation: showMain 0.5s ease-in forwards;
     opacity: 0;
@@ -159,7 +160,6 @@ main section{
 }
 .pdf__title{
     display: list-item;
-    list-style: disc;
 }
 .pdf__download{
     margin-left: 20px;

@@ -171,6 +171,7 @@ main section{
     display: inline-block;
     background-size: contain;
     background-repeat: no-repeat;
+    margin-bottom: 15px;
 }
 .email{
     width: 30px;
@@ -192,7 +193,6 @@ main section{
 
     .section--title{
         text-align: left;
-        padding-left: 20px;
     }
     .about{
         display: grid;

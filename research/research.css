@@ -140,6 +140,7 @@ main section{
 .research .contenido{
     order:3;
     padding: 0 20px;
+    text-align: justify;
 }
 
 
